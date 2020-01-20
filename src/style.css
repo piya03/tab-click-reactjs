@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.myul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    text-align: center;
+      grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+  list-style: none;
+  background: #efcfee;
+  padding: 23px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.myul li {
+  background : deeppink;
+      cursor: pointer;
+  padding : 10px;
+  border-radius: 10px;
+    
+}
+.discription div{
+ padding: 100px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.home{
+   background: blue;
+}
+.about{
+  background: red;
+}
+.blogs{
+  background:green;
+}
+.feature{
+  background:yellow;
+}
+.location{
+  background:rebeccapurple;
+}
+.contacts{
+  background: gray;
+}

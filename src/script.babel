@@ -1,0 +1,85 @@
+class Test extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: "home"
+    };
+  }
+
+  handleTab = value => {
+    this.setState({
+      active: value
+    });
+  };
+
+  render() {
+    const { active } = this.state;
+    return (
+      <div className="container">
+        <ul className="myul">
+          <li
+            onClick={() => {
+              this.handleTab("home");
+            }}
+          >
+            HOME
+          </li>
+          <li
+            onClick={() => {
+              this.handleTab("about");
+            }}
+          >
+            ABOUT
+          </li>
+
+          <li
+            onClick={() => {
+              this.handleTab("blogs");
+            }}
+          >
+            BLOGS
+          </li>
+          <li
+            onClick={() => {
+              this.handleTab("feature");
+            }}
+          >
+            FEATURES
+          </li>
+          <li
+            onClick={() => {
+              this.handleTab("location");
+            }}
+          >
+            LOCATION
+          </li>
+          <li
+            onClick={() => {
+              this.handleTab("contacts");
+            }}
+          >
+            CONTACTS
+          </li>
+        </ul>
+        <div className="discription">
+          {active == "home" && <div className="home">I am Home page.</div>}
+          {active == "about" && <div className="about">I am About page.</div>}
+          {active == "blogs" && <div className="blogs">I am Blogs page.</div>}
+          {active == "feature" && (
+            <div className="feature">I am Features page.</div>
+          )}
+
+          {active == "location" && (
+            <div className="location">I am Location page.</div>
+          )}
+
+          {active == "contacts" && (
+            <div className="contacts">I am Contacts page.</div>
+          )}
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Test />, document.getElementById("root"));
